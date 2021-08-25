@@ -5,6 +5,8 @@ import Footer from './Footer'
 import Header from './Header'
 import Layout from './Layout'
 
+import SignInWizard from './SignInWizard'
+
 function MainView({ children }) {
   const { below } = useViewport()
   const compactMode = below('medium')
@@ -31,6 +33,7 @@ function MainView({ children }) {
           `}
         >
           <Layout>{children}</Layout>
+          <SignInWizard />
         </div>
         <Footer compact={compactMode} />
       </div>
